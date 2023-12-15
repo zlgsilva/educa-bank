@@ -1,76 +1,190 @@
-/*configuracao padrao de inicio*/
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-header {
-    background-color:#708090; /*Cor de fundo do header (cabeçalho)*/
-    padding: 30px; /*ajustamos o tamanho do preenchimento*/
+/* chamamos o header  */
+header{
+    background-color: rgb(2, 113, 141);
+    padding: 30px;
+}
+ .menu-header{  /* aqui chamamos nossa class  que armazena as listas */
+    display: flex;  /*usamos para jogar os itens lado a lado */
+    justify-content: end; /*justificando o conteudo para o final do header*/
+    flex-wrap: wrap; /*usado para habilitar a quebra em telas menores */
 
 }
-
-.menu-header { /*aqui chamamos nossa class que armazena as listas*/
-    display: flex; /*usamos para jogar os itens lado a lado*/
-    justify-content: end;  /*justificando o conteudo para o final do
-    header*/
-    flex-wrap: wrap; /*usado para habilitar a quebra em telas menores*/
+.menu-header > li > a {
+    color: white; /*colocando a cor branca */
+    text-decoration: none; /*desabilitando a decoração do texto*/
+    font-size: 15px; /*tamanho da letra */
 }
-
-.menu-header li a {
-    color: white; /*cor da letra*/
-    text-decoration: none; /*tirar a decoração do texto (sublinhado)*/
-    font-size: 15px; /*tamanho da letra*/
+.menu-header > li > a:hover{  /*chamamos nessa tag "a" para estilização so passar o mouse */
+    color: blue;  /*habilitando a cor que sera habilitado */
+    transition: 0.8s;  /*tempo de transição para o efeito*/
+    font-size: 20px;  /*deixando o texto maior  */
 }
-
-
-.menu-header li a:hover {
-    color: blue;
-    transition: 0,8s;
+.menu-header > li {  /*chamando a tag header e alterando as li nela */
+    margin-left: 20px;  /*colocando o espaçamento para esquerda */ 
 }
-.menu-header li { /*chamamos nossa li diretamente para espaça-las*/
-    margin-left: 20px; /*Margem a esquerda para espaçamento*/
-}
-
 #sessao {
-    padding: 1rem; /*equivale a 16px*/
-    background-color: blueviolet;
+    padding: 12rem;  /*equivale varios px */
+    background: linear-gradient(180deg, #090e0f 8.33%,
+     rgb(1, 145, 145) 100%);
+}
+#sessao > h1 {
+font-size: 45px;
+color: aquamarine;
+}
+#sessao > p  {
+   font-size: 40px;
 }
 
-#sessao {
-    padding: 12rem;
-    background: linear-gradient(180deg, #c0cdcf 8.33%,
-    rgba(90, 168, 168) 100%); /*degrade*/
-}
-
-#sessao h1 {
-    font-size: 45px;
-    color: #222223;
-    
-
-}
-
-#sessao p {
-    font-size: 40px;
-}
-
-#sessao button {
+#sessao > button {
     padding: 20px;
-    border-radius: 45px;
-    width: 15rem;
-    color: rgb(19, 153, 108);
-    border-color: rgb(19, 153, 108);
+    border-radius: 50px;
+    width: 20rem;
+    color: rgb(19,153,108);
+    border-color: rgb(19,153,108);
     margin: 30px;
     font-size: 15px;
+}
+#sessao > button:hover {
+    color: black;
+    transition: 0.8s;
+    font-size: 20px;
+    background-color: rgb(19,153,108);
+}
+#app{
+    padding: 30vh;
+    background-color: rgb(0, 68, 80);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#app > div > button{
+    padding: 20px; /*prenchimento do nosso botão*/
+    border-radius: 50px; /*borda do nosso botão*/
+    width: 20vw; /*ajustamos a largura do botão*/
+    color: rgb(19,153,108); /*cor da letra do botão*/
+    border-color: rgb(19,153,108); /*cor da borda do botão*/
+    margin: 30px; /*alteração das margens em volta do botão*/
+    font-size: 15px; /*tamanho da letra do botão */
+    background-color: rgb(49, 44, 44);
 
 }
+#app > div > p {
+    font-size:35px;
+}
+#app > div > button:hover{
+    background-color: rgb(0, 0, 0); /*cor de fundo quando passa o mouse por cima  */
+    color: rgb(19,153,108); /*cor da letra quando passa por o mouse por cima */
+    border-color:  rgb(19,153,108); /* cor da borda quando passa o mouse por cima */
+    transition: 0.8s; /* transição quando passa por cima com o mouse*/
+    font-size: 20px; /* deixando a font maior quando passa o mouse por cima */
+}
+#app > div > img {
+    width: 30vw; /* a largura da nossa imagem*/
+    height: 60vh; /* ajustando a altura da nossa imagem*/
+    margin-left: 5rem; /*colocando a margem da nossa imagem pra esquerda*/
+    margin-top: 70px; /* espaçamento da nossa imagem */
+    justify-content: space-between; /* */
+}
+#container{
+    padding: 30vh;
+    background-color: rgb(0, 68, 80); 
+    flex-wrap: wrap;
+}
+#container > h2 {
+    font-size: 40px; /*aumentando o tamanho da fonte do nosso h2 */
+    margin-top: -20rem; /* espaçamento superior usando (+) (-) */
+    color: black; /* cor da letra do h2*/
+    text-align: center; /* alinhamento do texto h2*/
+}
+#container > p { /* aqui chamamos nossa tag*/
+    font-size: 20px;/*tamanho da letra */
+    margin-top: 30px; /* espaçamento superior*/
+    color: black;/* cor da letra*/
+    text-align: justify;/* tornando o texto justificavel*/
+}
+#container > .text1 { /*chamando a class text para mudar o paragrafo */
+    text-align: center; /* alinhando o texto para o centro  */
 
-#sessao button:hover {
-    background-color: rgb(19, 153, 108) ;
-    color: white;
-    border-color: white;
-    transition: 0.8s;
+}
+#container > button { /* aqui estamos chamando nosso button para estilização  */
+padding: 20px; /* tamanho do preenchimento do botão  */
+border-radius: 50px; /* arrendodamento do botão  */
+width: 15vw; /* largura do botão   */
+color: rgb(19,153,108); /* cor da letra  */
+border-color:  rgb(19,153,108); /* cor da borda do botão  */
+margin: 60px; /* margem externa do botão  */
+font-size: 15px; /* tamanho da letra do botão */
+}
+#container > button:hover{
+    background-color: rgb(0, 0, 0); /*cor de fundo quando passa o mouse por cima  */
+    color: rgb(19,153,108); /*cor da letra quando passa por o mouse por cima */
+    border-color:  rgb(19,153,108); /* cor da borda quando passa o mouse por cima */
+    transition: 0.8s; /* transição quando passa por cima com o mouse*/
+    font-size: 20px; /* deixando a font maior quando passa o mouse por cima */
+}
+.line{
+    margin: 0 auto;
+    width: 70%;
 
+}
+#container > img { /* chamando nossa tag da section para estilização*/
+    width: 50vw; /* largura da imagem */
+    margin-top: 30px; /*  distancia da margem superior */
+    margin-left: 10vw; /* distancia do margem a esquerda  */
+
+}
+#cofre {
+    background: linear-gradient(180deg, #03408546 8.33%, rgba(4, 55, 148, 0.589) 100%),
+    url(img/img\ cofre\ fundo.jpg); /* distancia do margem a esquerda  */
+    background-position: center; /* a posição da imagem de fundo  */
+    background-attachment: fixed; /* deixando a imagem fixa */
+    height: 50rem; /*   */
+    display: flex; /* distancia do margem a esquerda  */ 
+    align-items: center; /* distancia do margem a esquerda  */
+    flex-wrap: wrap; /* distancia do margem a esquerda  */
+
+
+}
+#cofre > div > img { /* distancia do margem a esquerda  */
+    width: 20vw; /* distancia do margem a esquerda  */
+    margin-left: 25rem; /* distancia do margem a esquerda  */
+    margin-top: 8rem; /* distancia do margem a esquerda  */
+    flex-wrap: wrap; /* distancia do margem a esquerda  */
+}
+#cofre > div > h2 { /* distancia do margem a esquerda  */
+    color: rgb(255, 255, 255); /* distancia do margem a esquerda  */
+    font-size: 25px; /* distancia do margem a esquerda  */
+    margin-left: 9rem; /* distancia do margem a esquerda  */
+}
+#cofre > div > p { /* distancia do margem a esquerda  */
+    color: rgb(255, 255, 255); /* distancia do margem a esquerda  */
+    font-size: 19px; /* distancia do margem a esquerda  */
+    margin-left: 9rem; /* distancia do margem a esquerda  */
+    margin-top: 2rem; /* distancia do margem a esquerda  */
+}
+footer{ /* chamamando a tag footer   */
+    padding: 11vh; /*   */
+    background-color: #206e7e; /* distancia do margem a esquerda  */
+    text-align: center; /* distancia do margem a esquerda  */
+}
+footer > img {
+    width: 20rem; /* largura da imagem */
+    height: 8rem; /* altura da imagem  */
+    margin-top: -5rem; /* espaçamentpo superior usando + -  */
+}
+.item{
+    color: rgb(49, 44, 44);
+    display: flex;
+    justify-content: space-between;
+}
+.item > a {
+    color: rgb(49, 44, 44);
+    text-decoration: none;
+    font-size: 20px;
 }
