@@ -1,0 +1,76 @@
+/*configuracao padrao de inicio*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color:#708090; /*Cor de fundo do header (cabeçalho)*/
+    padding: 30px; /*ajustamos o tamanho do preenchimento*/
+
+}
+
+.menu-header { /*aqui chamamos nossa class que armazena as listas*/
+    display: flex; /*usamos para jogar os itens lado a lado*/
+    justify-content: end;  /*justificando o conteudo para o final do
+    header*/
+    flex-wrap: wrap; /*usado para habilitar a quebra em telas menores*/
+}
+
+.menu-header li a {
+    color: white; /*cor da letra*/
+    text-decoration: none; /*tirar a decoração do texto (sublinhado)*/
+    font-size: 15px; /*tamanho da letra*/
+}
+
+
+.menu-header li a:hover {
+    color: blue;
+    transition: 0,8s;
+}
+.menu-header li { /*chamamos nossa li diretamente para espaça-las*/
+    margin-left: 20px; /*Margem a esquerda para espaçamento*/
+}
+
+#sessao {
+    padding: 1rem; /*equivale a 16px*/
+    background-color: blueviolet;
+}
+
+#sessao {
+    padding: 12rem;
+    background: linear-gradient(180deg, #c0cdcf 8.33%,
+    rgba(90, 168, 168) 100%); /*degrade*/
+}
+
+#sessao h1 {
+    font-size: 45px;
+    color: #222223;
+    
+
+}
+
+#sessao p {
+    font-size: 40px;
+}
+
+#sessao button {
+    padding: 20px;
+    border-radius: 45px;
+    width: 15rem;
+    color: rgb(19, 153, 108);
+    border-color: rgb(19, 153, 108);
+    margin: 30px;
+    font-size: 15px;
+
+}
+
+#sessao button:hover {
+    background-color: rgb(19, 153, 108) ;
+    color: white;
+    border-color: white;
+    transition: 0.8s;
+
+}
